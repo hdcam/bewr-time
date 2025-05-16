@@ -20,30 +20,30 @@ function calculateEndTime(startTime: string): string {
   return `${h}:${m.toString().padStart(2, '0')} ${ampm}`;
 }
 
-function ThemeToggle() {
-  const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+// function ThemeToggle() {
+//   const { theme, setTheme } = useTheme();
+//   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+//   useEffect(() => {
+//     setMounted(true);
+//   }, []);
 
-  if (!mounted) return null;
+//   if (!mounted) return null;
 
-  return (
-    <button
-      onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className="
-        absolute top-4 right-4 w-8 h-8 flex items-center justify-center 
-        rounded-full bg-gray-100 dark:bg-gray-700 text-xl shadow 
-        hover:scale-105 transition
-      "
-      aria-label="Toggle theme"
-    >
-      {theme === 'light' ? '🌙' : '☀️'}
-    </button>
-  );
-}
+//   return (
+//     <button
+//       onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+//       className="
+//         absolute top-4 right-4 w-8 h-8 flex items-center justify-center 
+//         rounded-full bg-gray-100 dark:bg-gray-700 text-xl shadow 
+//         hover:scale-105 transition
+//       "
+//       aria-label="Toggle theme"
+//     >
+//       {theme === 'light' ? '🌙' : '☀️'}
+//     </button>
+//   );
+// }
 
 export default function Home() {
   const [start, setStart] = useState('');
