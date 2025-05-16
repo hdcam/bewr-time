@@ -1,7 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { useTheme } from 'next-themes';
+import React, { useState } from 'react';
 
 function calculateEndTime(startTime: string): string {
   if (!startTime) return '';
