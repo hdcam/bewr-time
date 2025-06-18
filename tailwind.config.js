@@ -1,6 +1,6 @@
 module.exports = {
     darkMode: 'class',
-    content: ['./app/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
+    content: ['./src/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './pages/**/*.{ts,tsx}'],
     theme: {
       extend: {},
     },
