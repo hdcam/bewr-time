@@ -76,13 +76,12 @@ function calculateTimes(startTime: string, endTime?: string) {
   };
 }
 
-function TimeDisplay({ title, startTime, endTime, totalTime, workTime, lunchTime, bgColor, textColor }: {
+function TimeDisplay({ title, startTime, endTime, totalTime, workTime, bgColor, textColor }: {
   title: string;
   startTime: string;
   endTime: string;
   totalTime: string;
   workTime: string;
-  lunchTime: string;
   bgColor: string;
   textColor: string;
 }) {
@@ -287,7 +286,6 @@ export default function Home() {
                 endTime={timeInfo.actualWorked && !timeInfo.workedOvertime ? (timeInfo.actualEnd ?? '') : timeInfo.regularEnd}
                 totalTime={timeInfo.actualWorked && !timeInfo.workedOvertime ? timeInfo.actualWorked : timeInfo.regularHours}
                 workTime={timeInfo.actualWorked && !timeInfo.workedOvertime ? timeInfo.actualWorked : timeInfo.workHours}
-                lunchTime={timeInfo.lunchBreak}
                 bgColor="bg-green-50 dark:bg-green-950/20"
                 textColor="text-green-600 dark:text-green-400"
               />
@@ -299,7 +297,6 @@ export default function Home() {
                   endTime={timeInfo.actualEnd || timeInfo.minOtThreshold}
                   totalTime={timeInfo.actualWorked || timeInfo.overtimeHours}
                   workTime={timeInfo.overtimeWorked || timeInfo.overtimeWorkHours}
-                  lunchTime={timeInfo.lunchBreak}
                   bgColor="bg-pink-50 dark:bg-pink-950/20"
                   textColor="text-pink-600 dark:text-pink-400"
                 />
